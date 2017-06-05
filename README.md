@@ -1,6 +1,7 @@
 # ng-to-vue
 
-A demo of a Vue.js app built by refactoring an Angular 1 app
+A demo of a Vue.js app built by refactoring an Angular 1 app.  To illustrate how easy it is to go from AngularJS to Vue, an existing 
+AngularJS app (https://github.com/genehuh39/angular-es6-mobx-demo) was rebuilt using Vue.js 2.x and Vuex.  
 
 ## Getting Started
 You will need `node` (`brew install node` or https://nodejs.org/en/) and `npm` (which ships with node).
