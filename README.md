@@ -3,6 +3,8 @@
 A demo of a Vue.js app built by refactoring an Angular 1 app.  To illustrate how easy it is to go from AngularJS to Vue, an existing 
 AngularJS app (https://github.com/genehuh39/angular-es6-mobx-demo) was rebuilt using Vue.js 2.x and Vuex.  
 
+Vuex is the state management pattern and library for Vue.js apps (https://vuex.vuejs.org/en/intro.html).  It was inspired by Flux, Redux and Elm. 
+
 ## Getting Started
 You will need `node` (`brew install node` or https://nodejs.org/en/) and `npm` (which ships with node).
 
