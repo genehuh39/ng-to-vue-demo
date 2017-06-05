@@ -1,6 +1,9 @@
-ow# ng-to-vue
+# ng-to-vue
 
->  A demo of a Vue.js app built by refactoring an Angular 1 app
+A demo of a Vue.js app built by refactoring an Angular 1 app
+
+## Getting Started
+You will need `node` (`brew install node` or https://nodejs.org/en/) and `npm` (which ships with node).
 
 ## Build Setup
 
