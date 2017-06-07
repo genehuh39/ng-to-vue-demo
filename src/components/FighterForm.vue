@@ -77,7 +77,6 @@
         methods: {
             submit() {
                 if (this.formData.id) {
-//                    this.$store.dispatch('updateFighter', this.formData)
                     this.updateFighter(this.formData)
                 } else {
                     this.addFighter(this.formData)
@@ -92,12 +91,12 @@
             StarRating
         },
         computed: {
-            ...mapGetters({
-                weightClasses: 'weightClasses',
-                selectedFighter: 'selectedFighter'
-            }),
+            ...mapGetters([
+                'weightClasses',
+                'selectedFighter'
+            ]),
             formData() {
-                return {...this.selectedFighter}
+                return { ...this.selectedFighter }
             }
         }
     }
