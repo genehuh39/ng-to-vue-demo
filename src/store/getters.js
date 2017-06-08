@@ -11,9 +11,15 @@ export default {
      * @param id
      * @returns {Object}
      */
-    fighterById: (state, getters) => (id) => {
+    fighterById: state => (id) => {
         return state.fighterData.filter(fighter => fighter.id === id)[0]
     },
+    /**
+     * selectedFighter
+     *  Keeps track of the fighter to be selected for editing
+     * @param state
+     * @returns {Object}
+     */
     selectedFighter: state => {
         return state.selectedFighter
     },
@@ -34,12 +40,11 @@ export default {
         return state.weightClasses
     },
     /**
-     * calculateFighterQuotients
-     *  Compute the fighter scores for every fighter
-     * @param state
+     * convertedFighters
+     *  Adds a fighter score for every fighter, before returning an array containing all fighters
      * @returns {Array}
      */
-    calculateFighterQuotients: state => (fighterData) => {
+    convertedFighters: state => {
         return state.fighterData.map((fighter) => {
             const total = fighter.groundGame + fighter.rangeStriking + fighter.boxing + fighter.wrestling + fighter.clinch || 0
             fighter.fighterQuotient = (total / 5).toFixed(2)

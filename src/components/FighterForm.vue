@@ -2,7 +2,7 @@
     <b-modal id="modal1" title="Fighter Form" @ok="submit" ok-title="save" >
         <form @submit.stop.prevent="submit">
             <div class="form-group">
-                <label for="firstName">First Name</label>
+                <label>First Name</label>
                 <b-form-input type="text" name="firstName" placeholder="First Name" v-model="formData.firstName"></b-form-input>
             </div>
             <div class="form-group">
@@ -16,7 +16,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="description">Description</label>
+                <label>Description</label>
                 <b-form-input type="text" id="description"  placeholder="Profile" v-model="formData.description"></b-form-input>
             </div>
             <div class="form-group">
