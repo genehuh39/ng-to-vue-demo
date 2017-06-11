@@ -47,7 +47,7 @@ export default {
     convertedFighters: state => {
         return state.fighterData.map((fighter) => {
             const total = fighter.groundGame + fighter.rangeStriking + fighter.boxing + fighter.wrestling + fighter.clinch || 0
-            fighter.fighterQuotient = (total / 5).toFixed(2)
+            fighter.fighterQuotient = parseFloat((total / 5).toFixed(2))
             return fighter
         })
     }

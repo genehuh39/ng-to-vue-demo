@@ -1,37 +1,29 @@
 import fighters from './mock.json'
 
 export default {
-    fetchFighters({ commit }) {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                commit('LOAD_FIGHTERS', fighters.data)
-                resolve(fighters.data)
-            }, 10)
-        })
+    async fetchFighters({ commit }) {
+        await setTimeout(() => {
+            console.log('Fetching fighter data')
+        }, 500)
+        commit('LOAD_FIGHTERS', fighters.data)
     },
-    addFighter(context, payload) {
+    async addFighter(context, payload) {
         payload.id = context.state.fighterData.length + 1
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                context.commit('ADD_FIGHTER', payload)
-                resolve()
-            }, 10)
-        })
+        await setTimeout(() => {
+            console.log('Adding fighter')
+        }, 500)
+        context.commit('ADD_FIGHTER', payload)
     },
-    updateFighter({ commit }, payload) {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                commit('UPDATE_FIGHTER', payload)
-                resolve()
-            }, 10)
-        })
+    async updateFighter({ commit }, payload) {
+        await setTimeout(() => {
+            console.log('Updating fighter record')
+        }, 500)
+        commit('UPDATE_FIGHTER', payload)
     },
-    deleteFighter({ commit }, payload) {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                commit('DELETE_FIGHTER', payload)
-                resolve()
-            }, 10)
-        })
+    async deleteFighter({ commit }, payload) {
+        await setTimeout(() => {
+            console.log('Deleting fighter')
+        }, 500)
+        commit('DELETE_FIGHTER', payload)
     }
 }

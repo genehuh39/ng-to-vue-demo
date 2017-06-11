@@ -20,7 +20,7 @@
                 <td>{{fighter.lastName}}</td>
                 <td>{{fighter.weight}}</td>
                 <td>{{fighter.description}}</td>
-                <td><b-progress v-model="fighter.fighterQuotient" precision="1" max="10" show-progress animated></b-progress></td>
+                <td><b-progress v-model="fighter.fighterQuotient" :precision="1" :max="10" show-progress animated></b-progress></td>
                 <td><button-bar :fighter="fighter.id"></button-bar></td>
             </tr>
         </tbody>
