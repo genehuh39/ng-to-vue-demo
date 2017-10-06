@@ -7,7 +7,7 @@
 
 <script>
     export default {
-        name: 'button-bar',
+        name: 'ButtonBar',
         props: ['fighter'],
         methods: {
             selectFighter() {
