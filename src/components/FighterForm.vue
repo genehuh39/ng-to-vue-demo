@@ -73,7 +73,7 @@
     import StarRating from 'vue-star-rating'
 
     export default {
-        name: 'fighter-form',
+        name: 'FighterForm',
         methods: {
             submit() {
                 if (this.formData.id) {
