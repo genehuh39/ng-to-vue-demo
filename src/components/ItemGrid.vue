@@ -35,7 +35,7 @@
     import FighterForm from './FighterForm'
 
     export default {
-        name: 'item-grid',
+        name: 'ItemGrid',
         components: {
             ButtonBar,
             FighterForm
