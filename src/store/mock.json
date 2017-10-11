@@ -52,6 +52,20 @@
       "boxing": 5,
       "clinch": 10,
       "wrestling": 10
+    },
+    {
+      "id": 5,
+      "firstName": "Tony",
+      "lastName": "Ferguson",
+      "weight": "155",
+      "height": 71,
+      "age": 33,
+      "description": "Unorthodox fighter with unlimited stamina and unbreakable will",
+      "groundGame": 8,
+      "rangeStriking": 8,
+      "boxing": 6,
+      "clinch": 8,
+      "wrestling": 8
     }
   ]
 }
