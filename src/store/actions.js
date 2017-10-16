@@ -25,5 +25,9 @@ export default {
             console.log('Deleting fighter')
         }, 500)
         commit('DELETE_FIGHTER', payload)
+    },
+    clearFighter({ commit }) {
+        console.log('Clearing selected fighter')
+        commit('CLEAR_FIGHTER')
     }
 }
