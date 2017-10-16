@@ -3,11 +3,11 @@
         <form @submit.stop.prevent="submit">
             <div class="form-group">
                 <label>First Name</label>
-                <b-form-input type="text" name="firstName" placeholder="First Name" v-model="formData.firstName"></b-form-input>
+                <input type="text" class="form-control" name="firstName" placeholder="First Name" v-model="formData.firstName">
             </div>
             <div class="form-group">
                 <label>Last Name</label>
-                <b-form-input type="text" name="lastName" placeholder="Last Name" v-model="formData.lastName"></b-form-input>
+                <input type="text" class="form-control" name="lastName" placeholder="Last Name" v-model="formData.lastName">
             </div>
             <div class="form-group">
                 <label for="weight">Weight Class</label>
@@ -17,7 +17,7 @@
             </div>
             <div class="form-group">
                 <label>Description</label>
-                <b-form-input type="text" id="description"  placeholder="Profile" v-model="formData.description"></b-form-input>
+                <input type="text" class="form-control" id="description"  placeholder="Profile" v-model="formData.description">
             </div>
             <div class="form-group">
                 <label>Ground Game (BJJ)</label>
