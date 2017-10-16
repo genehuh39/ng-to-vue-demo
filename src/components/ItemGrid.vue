@@ -42,7 +42,7 @@
         },
         methods: {
             addNewFighter() {
-                this.$store.commit('CLEAR_FIGHTER')
+                this.$store.dispatch('clearFighter')
                 this.$root.$emit('show::modal', 'modal1')
             }
         },
