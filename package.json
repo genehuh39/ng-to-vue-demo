@@ -5,6 +5,7 @@
   "author": "Gene Huh <ehuh@teamexos.com>",
   "private": true,
   "scripts": {
+    "start": "npm run dev",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
