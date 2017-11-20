@@ -30,7 +30,7 @@
 </template>
 
 <script>
-    import { mapGetters } from 'vuex'
+    import { mapActions, mapGetters } from 'vuex'
     import ButtonBar from './ButtonBar'
     import FighterForm from './FighterForm'
 
@@ -41,6 +41,9 @@
             FighterForm
         },
         methods: {
+            ...mapActions([
+                'clearFighter'
+            ]),
             addNewFighter() {
                 this.$store.dispatch('clearFighter')
                 this.$root.$emit('show::modal', 'modal1')
