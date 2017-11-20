@@ -3,7 +3,7 @@
     <table class="item-grid table table-striped table-bordered table-hover table-responsive">
         <thead>
             <tr>
-                <td colspan="6"><button type="button" class="btn btn-primary" @click="addNewFighter">add new fighter</button></td>
+                <td colspan="6"><button id="add-fighter" type="button" class="btn btn-primary" @click="addNewFighter">add new fighter</button></td>
             </tr>
             <tr>
                 <th>First Name</th>
@@ -45,7 +45,7 @@
                 'clearFighter'
             ]),
             addNewFighter() {
-                this.$store.dispatch('clearFighter')
+                this.clearFighter()
                 this.$root.$emit('show::modal', 'modal1')
             }
         },
