@@ -16,7 +16,9 @@ describe('ItemGrid.vue', () => {
         }
         store = new Vuex.Store({
             state: {},
-            actions
+            actions,
+            mutations: {},
+            getters: {}
         })
     })
     it('calls store action clearFighter() when add button is clicked', () => {
