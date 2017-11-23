@@ -10,16 +10,26 @@ Vue.use(Vuex)
 describe('ItemGrid.vue', () => {
     let store
     let actions
+    let getters
     beforeEach(() => {
         actions = {
             clearFighter: sinon.stub()
+        }
+        getters = {
+            convertedFighters: () => [1],
+            selectedFighter: () => {},
+            weightClasses: () => []
         }
         store = new Vuex.Store({
             state: {},
             actions,
             mutations: {},
-            getters: {}
+            getters
         })
+    })
+    it('should create a true Vue.js component', () => {
+        const wrapper = mount(ItemGrid, { store })
+        expect(wrapper.isVueComponent).to.equal(true)
     })
     it('calls store action clearFighter() when add button is clicked', () => {
         const wrapper = mount(ItemGrid, { store })
