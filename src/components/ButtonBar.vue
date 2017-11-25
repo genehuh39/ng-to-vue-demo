@@ -1,21 +1,27 @@
 <template>
     <div class="btn-group">
-        <button type="button" class="btn btn-sm btn-success" @click="selectFighter()">edit</button>
-        <button type="button" class="btn btn-sm btn-danger" @click="deleteFighter()">delete</button>
+        <button type="button" class="btn btn-sm btn-success" @click="editFighter()">edit</button>
+        <button type="button" class="btn btn-sm btn-danger" @click="removeFighter()">delete</button>
     </div>
 </template>
 
 <script>
+    import { mapActions } from 'vuex'
+
     export default {
         name: 'ButtonBar',
         props: ['fighter'],
         methods: {
-            selectFighter() {
-                this.$store.commit('SELECT_FIGHTER', this.fighter)
+            ...mapActions([
+                'deleteFighter',
+                'selectFighter'
+            ]),
+            editFighter() {
+                this.selectFighter(this.fighter)
                 this.$root.$emit('show::modal', 'modal1')
             },
-            deleteFighter() {
-                this.$store.dispatch('deleteFighter', this.fighter)
+            removeFighter() {
+                this.deleteFighter(this.fighter)
             }
         }
     }
