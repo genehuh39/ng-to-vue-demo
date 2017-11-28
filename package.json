@@ -5,7 +5,7 @@
   "author": "Gene Huh <ehuh@teamexos.com>",
   "private": true,
   "scripts": {
-    "start": "npm run dev",
+    "start": "nf start",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
@@ -52,6 +52,7 @@
     "express": "^4.14.1",
     "extract-text-webpack-plugin": "^2.0.0-rc.2",
     "file-loader": "^0.10.0",
+    "foreman": "^2.0.0",
     "friendly-errors-webpack-plugin": "^1.1.3",
     "function-bind": "^1.1.0",
     "html-webpack-plugin": "^2.28.0",
