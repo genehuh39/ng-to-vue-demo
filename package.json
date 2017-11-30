@@ -12,7 +12,7 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "mock-api": "json-server --watch db.json --routes ./api/routes.json --port 3003"
+    "mock-api": "json-server --watch ./api/db.json --routes ./api/routes.json --port 3003"
   },
   "dependencies": {
     "babel-runtime": "^6.22.0",
