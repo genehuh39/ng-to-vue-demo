@@ -7,6 +7,7 @@
 </template>
 
 <script>
+    import { mapActions } from 'vuex'
     import ItemGrid from './ItemGrid'
     import Dashboard from './Dashboard'
 
@@ -16,8 +17,13 @@
             ItemGrid,
             Dashboard
         },
+        methods: {
+            ...mapActions([
+                'fetchFighters'
+            ])
+        },
         created() {
-            this.$store.dispatch('fetchFighters')
+            this.fetchFighters()
         }
     }
 </script>
