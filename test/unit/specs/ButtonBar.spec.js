@@ -26,4 +26,9 @@ describe('ButtonBar.vue', () => {
         const wrapper = mount(ButtonBar, { store })
         expect(wrapper.isVueComponent).to.equal(true)
     })
+    it('calls store action deleteFighter() when add button is clicked', () => {
+        const wrapper = mount(ButtonBar, { store })
+        wrapper.find('button')[1].trigger('click')
+        expect(actions.deleteFighter.calledOnce).to.equal(true)
+    })
 })
