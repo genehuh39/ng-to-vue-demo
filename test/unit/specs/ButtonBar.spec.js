@@ -12,7 +12,7 @@ describe('ButtonBar.vue', () => {
     let actions
     beforeEach(() => {
         actions = {
-            editFighter: sinon.stub(),
+            selectFighter: sinon.stub(),
             deleteFighter: sinon.stub()
         }
         store = new Vuex.Store({
@@ -26,7 +26,12 @@ describe('ButtonBar.vue', () => {
         const wrapper = mount(ButtonBar, { store })
         expect(wrapper.isVueComponent).to.equal(true)
     })
-    it('calls store action deleteFighter() when add button is clicked', () => {
+    it('calls store action selectFighter() when the edit button is clicked', () => {
+        const wrapper = mount(ButtonBar, { store })
+        wrapper.find('button')[0].trigger('click')
+        expect(actions.selectFighter.calledOnce).to.equal(true)
+    })
+    it('calls store action deleteFighter() when delete button is clicked', () => {
         const wrapper = mount(ButtonBar, { store })
         wrapper.find('button')[1].trigger('click')
         expect(actions.deleteFighter.calledOnce).to.equal(true)
