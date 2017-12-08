@@ -8,18 +8,21 @@ import { expect } from 'chai'
 Vue.use(Vuex)
 
 describe('FighterForm.vue', () => {
-    let store
-    let actions
+    let store, getters, actions
     beforeEach(() => {
         actions = {
             updateFighter: sinon.stub(),
             addFighter: sinon.stub()
         }
+        getters = {
+            selectedFighter: () => {},
+            weightClasses: () => []
+        }
         store = new Vuex.Store({
             state: {},
             actions,
             mutations: {},
-            getters: {}
+            getters
         })
     })
     it('should create a true Vue.js component', () => {

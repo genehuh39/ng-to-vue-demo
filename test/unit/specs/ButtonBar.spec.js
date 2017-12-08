@@ -8,8 +8,7 @@ import { expect } from 'chai'
 Vue.use(Vuex)
 
 describe('ButtonBar.vue', () => {
-    let store
-    let actions
+    let store, actions
     beforeEach(() => {
         actions = {
             selectFighter: sinon.stub(),
