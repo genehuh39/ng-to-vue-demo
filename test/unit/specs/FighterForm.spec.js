@@ -16,7 +16,7 @@ describe('FighterForm.vue', () => {
         }
         getters = {
             selectedFighter: () => {},
-            weightClasses: () => []
+            weightClasses: () => ['Heavy', '205', '185', '170', '155', '145', '135', '125', '115']
         }
         store = new Vuex.Store({
             state: {},
