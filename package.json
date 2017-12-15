@@ -1,7 +1,7 @@
 {
   "name": "ng-to-vue",
   "version": "1.0.0",
-  "description": " A demo of a Vue.js app built by refactoring an Angular 1 app",
+  "description": " A demo of a Vue.js app built by refactoring an AngularJS 1 app",
   "author": "Gene Huh <ehuh@teamexos.com>",
   "private": true,
   "scripts": {
