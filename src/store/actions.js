@@ -1,10 +1,8 @@
-import fighters from './mock.json'
+import axios from 'axios'
 
 export default {
     async fetchFighters({ commit }) {
-        await setTimeout(() => {
-            console.log('Fetching fighter data')
-        }, 500)
+        const fighters = await axios.get('/api/fighter')
         commit('LOAD_FIGHTERS', fighters.data)
     },
     async addFighter(context, payload) {
