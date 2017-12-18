@@ -7,9 +7,7 @@ export default {
     },
     async addFighter(context, payload) {
         payload.id = context.state.fighterData.length + 1
-        await setTimeout(() => {
-            console.log('Adding fighter')
-        }, 500)
+        await axios.post('/api/fighter', payload)
         context.commit('ADD_FIGHTER', payload)
     },
     async updateFighter({ commit }, payload) {
