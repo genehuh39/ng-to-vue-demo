@@ -11,9 +11,7 @@ export default {
         context.commit('ADD_FIGHTER', payload)
     },
     async updateFighter({ commit }, payload) {
-        await setTimeout(() => {
-            console.log('Updating fighter record')
-        }, 500)
+        await axios.put(`/api/fighter/${payload.id}`, payload)
         commit('UPDATE_FIGHTER', payload)
     },
     async deleteFighter({ commit }, payload) {
