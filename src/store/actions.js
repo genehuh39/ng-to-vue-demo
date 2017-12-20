@@ -15,9 +15,7 @@ export default {
         commit('UPDATE_FIGHTER', payload)
     },
     async deleteFighter({ commit }, payload) {
-        await setTimeout(() => {
-            console.log('Deleting fighter')
-        }, 500)
+        await axios.delete(`/api/fighter/${payload}`)
         commit('DELETE_FIGHTER', payload)
     },
     clearFighter({ commit }) {
