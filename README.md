@@ -14,6 +14,12 @@ You will need `node` (`brew install node` or https://nodejs.org/en/) and `npm` (
 # install dependencies
 npm install
 
+# serve with hot relod at localhost:8080 with mock api
+npm start 
+
+# serve mock api at localhost:3003
+npm run mock-api
+
 # serve with hot reload at localhost:8080
 npm run dev
 
