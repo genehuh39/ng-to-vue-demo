@@ -80,6 +80,19 @@
       "boxing": 7,
       "clinch": 9,
       "wrestling": 9
+    },
+    {
+      "firstName": "Max",
+      "lastName": "Holloway",
+      "weight": "155",
+      "description": "All-around striker with good grappling",
+      "groundGame": 7,
+      "boxing": 9,
+      "rangeStriking": 8,
+      "wrestling": 6,
+      "clinch": 9,
+      "id": 7,
+      "fighterQuotient": 7.8
     }
   ]
 }
