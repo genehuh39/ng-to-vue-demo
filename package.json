@@ -12,7 +12,9 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
-    "mock-api": "json-server --watch ./api/db.json --routes ./api/routes.json --port 3003"
+    "mock-api": "json-server --watch ./api/db.json --routes ./api/routes.json --port 3003",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "axios": "^0.17.1",
@@ -89,7 +91,12 @@
     "webpack-bundle-analyzer": "^2.2.1",
     "webpack-dev-middleware": "^1.10.0",
     "webpack-hot-middleware": "^2.16.1",
-    "webpack-merge": "^2.6.1"
+    "webpack-merge": "^2.6.1",
+    "@storybook/vue": "^3.3.15",
+    "@storybook/addon-actions": "^3.3.15",
+    "@storybook/addon-links": "^3.3.15",
+    "@storybook/addons": "^3.3.15",
+    "babel-preset-vue": "^2.0.1"
   },
   "engines": {
     "node": ">= 4.0.0",
