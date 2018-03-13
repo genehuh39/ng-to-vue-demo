@@ -25,32 +25,32 @@
             </tr>
         </tbody>
     </table>
-    <fighter-form></fighter-form>
+    <b-modal id="modal1" title="Fighter Form" @ok="submit" ok-title="save" >
+        <fighter-form></fighter-form>
+    </b-modal>
     </div>
 </template>
 
 <script>
-    import { mapActions, mapGetters } from 'vuex'
-    import ButtonBar from './ButtonBar'
-    import FighterForm from './FighterForm'
+import { mapActions, mapGetters } from 'vuex'
+import ButtonBar from './ButtonBar'
+import FighterForm from './FighterForm'
 
-    export default {
-        name: 'ItemGrid',
-        components: {
-            ButtonBar,
-            FighterForm
-        },
-        methods: {
-            ...mapActions([
-                'clearFighter'
-            ]),
-            addNewFighter() {
-                this.clearFighter()
-                this.$root.$emit('show::modal', 'modal1')
-            }
-        },
-        computed: {
-            ...mapGetters(['convertedFighters'])
+export default {
+    name: 'ItemGrid',
+    components: {
+        ButtonBar,
+        FighterForm
+    },
+    methods: {
+        ...mapActions(['clearFighter']),
+        addNewFighter() {
+            this.clearFighter()
+            this.$root.$emit('show::modal', 'modal1')
         }
+    },
+    computed: {
+        ...mapGetters(['convertedFighters'])
     }
+}
 </script>
