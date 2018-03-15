@@ -33,8 +33,8 @@
 
 <script>
 import { mapActions, mapGetters } from 'vuex'
-import ButtonBar from './ButtonBar'
-import FighterForm from './FighterForm'
+import ButtonBar from './ButtonBar.vue'
+import FighterForm from './FighterForm.vue'
 
 export default {
     name: 'ItemGrid',
