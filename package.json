@@ -10,7 +10,7 @@
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
+    "test": "jest",
     "lint": "eslint --ext .js,.vue src test/unit/specs test/e2e/specs",
     "mock-api": "json-server --watch ./api/db.json --routes ./api/routes.json --port 3003",
     "storybook": "start-storybook -p 6006 -c .storybook",
@@ -29,6 +29,7 @@
     "@storybook/addon-actions": "^3.3.15",
     "@storybook/addon-centered": "^3.3.15",
     "@storybook/addon-links": "^3.3.15",
+    "@storybook/addon-storyshots": "^3.3.15",
     "@storybook/addon-viewport": "^3.3.15",
     "@storybook/addons": "^3.3.15",
     "@storybook/vue": "^3.3.15",
@@ -36,6 +37,7 @@
     "avoriaz": "^6.0.1",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
+    "babel-jest": "^23.0.0-alpha.0",
     "babel-loader": "^6.2.10",
     "babel-plugin-istanbul": "^3.1.2",
     "babel-plugin-transform-runtime": "^6.22.0",
@@ -69,6 +71,8 @@
     "html-webpack-plugin": "^2.28.0",
     "http-proxy-middleware": "^0.17.3",
     "inject-loader": "^2.0.1",
+    "jest": "^23.0.0-alpha.0",
+    "jest-vue-preprocessor": "^1.4.0",
     "json-loader": "^0.5.4",
     "json-server": "^0.12.1",
     "karma": "^1.4.1",
@@ -104,5 +108,22 @@
   "engines": {
     "node": ">= 4.0.0",
     "npm": ">= 3.0.0"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "vue"
+    ],
+    "transform": {
+      "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
+      ".*\\.(vue)$": "<rootDir>/node_modules/jest-vue-preprocessor"
+    },
+    "moduleNameMapper": {
+      "src/components/(.*)$": "<rootDir>/src/components/$1",
+      "^vue$": "vue/dist/vue.common.js",
+      "src": "<rootDir>/src",
+      "assets": "<rootDir>/src/assets",
+      "components": "<rootDir>/src/components"
+    }
   }
 }
