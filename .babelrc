@@ -15,6 +15,7 @@
   "comments": false,
   "env": {
     "test": {
+      "presets": [["env"], "vue"],
       "plugins": [
         "istanbul"
       ]
