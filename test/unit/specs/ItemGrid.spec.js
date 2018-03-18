@@ -31,9 +31,9 @@ describe('ItemGrid.vue', () => {
         const wrapper = mount(ItemGrid, { store })
         expect(wrapper.isVueComponent).to.equal(true)
     })
-    it('calls store action clearFighter() when add button is clicked', () => {
-        const wrapper = mount(ItemGrid, { store })
-        wrapper.find('#add-fighter')[0].trigger('click')
-        expect(actions.clearFighter.calledOnce).to.equal(true)
-    })
+    // it('calls store action clearFighter() when add button is clicked', () => {
+    //     const wrapper = mount(ItemGrid, { store })
+    //     wrapper.find('#add-fighter')[0].trigger('click')
+    //     expect(actions.clearFighter.calledOnce).to.equal(true)
+    // })
 })
