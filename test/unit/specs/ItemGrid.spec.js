@@ -1,11 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import ItemGrid from 'src/components/ItemGrid'
+import BootstrapVue from 'bootstrap-vue'
 import { mount } from 'avoriaz'
 import sinon from 'sinon'
 import { expect } from 'chai'
 
 Vue.use(Vuex)
+Vue.use(BootstrapVue)
 
 describe('ItemGrid.vue', () => {
     let store
