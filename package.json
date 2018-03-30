@@ -97,7 +97,7 @@
     "sinon-chai": "^2.8.0",
     "url-loader": "^0.5.7",
     "vue-loader": "^10.3.0",
-    "vue-server-renderer": "^2.5.16",
+    "vue-server-renderer": "^2.5.9",
     "vue-star-rating": "^1.4.0",
     "vue-style-loader": "^2.0.0",
     "vue-template-compiler": "^2.5.9",
